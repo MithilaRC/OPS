@@ -1,0 +1,99 @@
+{% include 'design.html' %}
+<form action="/editaparts/" method="post"  style="margin-top:3%;margin-left: 30%">
+    {% csrf_token %}
+{% if data %}
+    {% for x in data %}
+   <table  style="margin-top: 5%;margin-left: 20%;font-size: 20px;color: rebeccapurple" >
+
+        <tr>
+            <th>
+                Apartment Number
+            </th>
+        <th>
+                <input type="number" name="ano" value="{{ x.apartno }}" readonly>
+        </th>
+        </tr>
+       <tr>
+            <th>
+                Road Number
+            </th>
+         <th>
+                <input type="number" name="rno" value="{{ x.roadno}}" >
+        </th>
+       </tr>
+       <tr>
+             <th>
+                Survey Number
+            </th>
+         <th>
+                <input type="number" name="sno" value="{{ x.surveyno }}" >
+        </th>
+       </tr>
+       <tr>
+                <th>Cost Per Sqaure Yard:</th>
+             <th>
+                <input type="number" name="csy" value="{{ x.cstpersqyd}}" >
+        </th>
+       </tr>
+       <tr>
+                <th>
+                Total Sqaure Yard:
+            </th>
+             <th>
+                <input type="number" name="tsy" value="{{ x.totalsqyd}}" >
+        </th>
+       </tr>
+       <tr>
+                 <th>
+                Other Expenses:
+            </th>
+             <th>
+                <input type="number" name="expenses" value="{{ x.expenses}}">
+        </th>
+       </tr>
+       <tr>
+                 <th>
+                Boundaries:
+            </th>
+             <th>
+                <input type="number" name="boundaries" value="{{ x.boundaries}}" >
+        </th>
+        </tr>
+        <tr>
+                 <th>
+                Facing:
+            </th>
+             <th>
+                <input type="text" name="facing" value="{{ x.facing}}" >
+        </th>
+        </tr>
+        <tr>
+                 <th>
+                Status:
+            </th>
+             <th>
+                <input type="text" name="status" value="{{ x.status}}" >
+        </th>
+        </tr>
+        <tr>
+                 <th>
+                Total Cost:
+            </th>
+             <th>
+                <input type="number" name="tcost" value="{{ x.totalcost}}">
+        </th>
+        </tr>
+       <tr>
+          <th>
+              <button type="submit">Edit</button>
+          </th>
+
+        </tr>
+        </table>
+    {% endfor %}
+{% endif %}
+
+</form>
+{% include 'footer.html' %}
+</body>
+</html>

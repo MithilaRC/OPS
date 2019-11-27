@@ -1,0 +1,32 @@
+{% include 'design.html' %}
+{% if data %}
+   <table border="1" style="margin-top: 5%;margin-left: 20%;font-size: 20px;color: rebeccapurple">
+{% for x in data %}
+
+    <tr>
+         <th>
+                Apartment Number
+            </th>
+            <th>
+                Road Number
+            </th>
+             <th>
+                Survey Number
+            </th>
+    </tr>
+    <tr>
+            <th>
+                <a>{{ x.flatno}}</a>
+            </th>
+                <th>
+                {{ x.roadno}}
+            </th>
+                 <th>
+                {{ x.surveyno }}
+            </th>
+    </tr>
+
+{% endfor %}
+     </table>
+{% endif %}
+{% include 'footer.html' %}

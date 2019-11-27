@@ -1,0 +1,23 @@
+{% include 'design.html' %}
+{% if data %}
+    <table border="2">
+    <tr>
+        <th>ApartmentNO</th>
+        <th>roadno</th>
+        <th>Surveyno</th>
+        <th>Delete</th>
+    </tr>
+
+    {% for x in data %}
+        <tr>
+        <th><a href="/editaparts2{{ x.flatno }}/">{{ x.flatno }}</a></th>
+        <th>{{ x.roadno }}</th>
+        <th>{{ x.surveyno }}</th>
+        <th><a href="#">Yes</a></th>
+        </tr>
+    {% endfor %}
+    </table>
+{% endif %}
+{% if msg %}
+{{ msg }}
+{% endif %}

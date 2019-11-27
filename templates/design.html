@@ -1,0 +1,91 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        background-color: silver;
+        color: midnightblue;
+        margin-top: 10px;
+    }
+    table{
+        margin-top: 5%;
+        margin-left: 20%;font-size: 20px; color: midnightblue;
+    }
+    form{
+        margin-top: 5%;
+        margin-left: 20%;font-size: 20px; color: midnightblue;
+    }
+</style>
+<body>
+<div class="container" style="margin-top:3%;margin-left: 30%">
+     <img src="{% static 'images/img2.jpg' %}" style="float: left" width="50" height="50"><h1>ONLINE PROPERTY SALE</h1>
+</div>
+<!-- Navigation bar -->
+<div class="btn-group" style="margin-left: 5%;margin-top: 5%;width: 90%;font-size: 30%;">
+    <a href="#" class="btn btn-danger">Home</a>
+    <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Plots
+  </button>
+  <div class="dropdown-menu">
+    <a href="/newplot/">New Plot</a>
+    <a class="dropdown-item" href="/editpt/">Edit Plot</a>
+    <a class="dropdown-item" href="/viewplot/">View Plot</a>
+    <a class="dropdown-item" href="/deleteplot/">Delete Plot</a>
+  </div>
+</div>
+    <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Apartments
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="/newapart/">New Apartment</a>
+    <a class="dropdown-item" href="/viewapart/">View Apartment</a>
+      <a class="dropdown-item" href="/editapt1/">Modiy Apartment</a>
+      <a class="dropdown-item" href="/deleteapart/">Delete Apartment</a>
+
+  </div>
+</div>
+    <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Sales
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="#">Separated link</a>
+  </div>
+</div>
+    <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Employees
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="/createemp1/">Create Employee</a>
+    <a class="dropdown-item" href="/viewemp/">View Employee</a>
+    <a class="dropdown-item" href="/deleteemp/">Delete Employee</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="/editemp/">Edit Employee</a>
+  </div>
+</div>
+    <div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Reports
+  </button>
+   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+       <a class="dropdown-item" href="#">Sold Plots</a>
+       <a class="dropdown-item" href="#">Resrved Plots</a>
+       <a class="dropdown-item" href="#">Vacant Plots</a>
+        </div>
+    </div>
+    <a href="/about/" class="btn btn-danger">About</a>
+    <a href="/index/" class="btn btn-danger">Logout</a>
+</div>

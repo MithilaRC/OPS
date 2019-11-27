@@ -1,0 +1,12 @@
+{% include 'design.html' %}
+{% if data %}
+<table border="1">
+    <th>Users</th>
+    {% for x in data %}
+    <tr>
+        <th>{{ x.uname }}</th>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+{% include 'footer.html' %}

@@ -1,0 +1,10 @@
+{% include 'design.html' %}
+<form action="/delpt/" method="post">
+    {% csrf_token %}
+    Enter Plot Number:<input type="number" name="pno" required><br>
+    <button type="submit">Delete</button>
+</form>
+{% if message1 %}
+{{ message1 }}
+{% endif %}
+{% include 'footer.html' %}

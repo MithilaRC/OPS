@@ -1,0 +1,7 @@
+{% include 'design.html' %}
+<form action="/adduser1/" method="post">
+    {% csrf_token %}
+    Enter Username:<input type="text" name="uname" required><br>
+    Enter Password:<input type="text" name="pwd" required><br>
+    <button type="submit">Add User</button>
+</form>

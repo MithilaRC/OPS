@@ -1,0 +1,11 @@
+{% include 'design.html' %}
+<form action="/duser/" method="post">
+    {% csrf_token %}
+
+Enter Username:<input type="text" name="uname"><br>
+    Enter Password:<input type="password" name="pwd"  ><br>
+<button type="submit">Delete</button>
+    </form>
+{% if msg %}
+    {{ msg }}
+{% endif %}

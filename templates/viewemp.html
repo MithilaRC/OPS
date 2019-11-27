@@ -1,0 +1,11 @@
+{% include 'design.html' %}
+<form action="/viewemp1/" method="post" style="margin-top: 5%;margin-left: 20%;font-size: 20px;color: rebeccapurple">
+    {% csrf_token %}
+    Enter Employee Number:<input type="number" name="eno" required> <br>
+    <button type="submit">View</button>
+</form>
+{% if data1 %}
+    {{ data1 }}
+{% endif %}
+{% include 'footer.html' %}
+

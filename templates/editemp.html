@@ -1,0 +1,10 @@
+{% include 'design.html' %}
+<form action="/editemp1/" method="post">
+    {% csrf_token %}
+
+    Enter Employee ID:<input type="number" name="eid" required><br>
+    <button type="submit">Edit</button>
+</form>
+{% include 'footer.html' %}
+
+

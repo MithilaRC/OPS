@@ -1,0 +1,31 @@
+{% include 'design.html' %}
+{% for x in data %}
+<table  border="2" style="margin-top: 5%;margin-left: 20%;font-size: 20px" >
+
+    <tr>
+        <th>EID</th>
+        <th>NAME</th>
+        <th>Email</th>
+        <th>Location</th>
+        <th>DOJ</th>
+        <th>Employee Role</th>
+        <th>Employee Qualification</th>
+        <th>Employee Remarks</th>
+    </tr>
+        <tr>
+        <th>{{ x.id }}</th>
+        <th>
+            {{ x.name }}
+        </th>
+        <th>{{ x.maillocation }}</th>
+        <th>{{ x.locatio }}</th>
+        <th>{{ x.doj }}</th>
+        <th>{{ x.role }}</th>
+        <th>{{ x.qualification }}</th>
+        <th>{{ x.remarks }}</th>
+    </tr>
+
+
+</table>
+{% endfor %}
+{% include 'footer.html' %}

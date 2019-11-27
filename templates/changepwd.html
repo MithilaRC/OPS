@@ -1,0 +1,11 @@
+{% include 'design.html' %}
+<form action="/cpwd/" method="post">
+    {% csrf_token %}
+
+Old Password:<input type="password" name="opwd"><br>
+New Password:<input type="password" name="npwd"><br>
+<button type="submit">Change Password</button>
+</form>
+    {% if msg %}
+        {{ msg }}
+    {% endif %}
